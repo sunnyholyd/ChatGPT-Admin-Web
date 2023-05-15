@@ -13,6 +13,7 @@ export default async function sendEmail(to: string, code: string | number) {
     bodyHtml: `您的激活码是：${code}`,
   };
 
+  console.log(`code: ${code}`)
   const queryString: string = new URLSearchParams(params).toString();
 
   try {
